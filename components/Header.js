@@ -23,7 +23,10 @@ const Container = styled.section`
 
 const Logo = styled.h1`
   font-size: 2.5em;
-  padding: 0;
   color: #222;
   border-bottom: 5px solid #222;
+  text-align: center;
+  @media (min-width: 415px) {
+    text-align: left;
+  }
 `;
