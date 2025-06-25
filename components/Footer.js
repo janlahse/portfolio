@@ -6,20 +6,20 @@ export default function Footer() {
   return (
     <Container>
       <Links>
-        <Link href="https://www.linkedin.com/in/jan-lahse/">
-          <Logo
-            alt="LinkedIn Logo"
-            src="/linkedin_logo.png"
-            width={635}
-            height={540}
-          />
-        </Link>
         <Link href="https://github.com/janlahse">
           <Logo
             alt="GitHub Logo"
             src="/github_logo.png"
             width={240}
             height={240}
+          />
+        </Link>
+        <Link href="https://www.linkedin.com/in/jan-lahse/">
+          <Logo
+            alt="LinkedIn Logo"
+            src="/linkedin_logo_blue.png"
+            width={635}
+            height={540}
           />
         </Link>
       </Links>
@@ -35,7 +35,7 @@ const Container = styled.section`
 
 const Links = styled.section`
   border-top: 5px solid #222;
-  margin: 0 10px;
+  margin: 0 15px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -48,5 +48,5 @@ const Links = styled.section`
 const Logo = styled(Image)`
   width: 30px;
   height: 100%;
-  margin: 5px 0 10px 0;
+  margin: 5px 0 5.5px 0;
 `;
