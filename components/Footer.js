@@ -31,6 +31,7 @@ const Container = styled.section`
   position: fixed;
   bottom: 0;
   width: 100%;
+  background-color: #f2f2f2;
 `;
 
 const Links = styled.section`
