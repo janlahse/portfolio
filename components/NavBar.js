@@ -12,15 +12,20 @@ export default function NavBar() {
 }
 
 const Bar = styled.ul`
+  flex-grow: 1;
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   list-style: none;
-  max-width: 400px;
+  height: 35px;
   padding: 0;
-  margin-top: 5px;
   font-size: 1.5em;
+  @media (min-width: 650px) {
+    max-width: 400px;
+  }
   & > li {
     transition: font-size 0.3s;
+    padding: 1px;
     &:hover {
       cursor: pointer;
       font-size: 1.5em;
