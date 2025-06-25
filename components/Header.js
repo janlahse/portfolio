@@ -18,7 +18,7 @@ export default function Header() {
 const Container = styled.section`
   position: fixed;
   width: 100%;
-  padding: 10px;
+  padding: 5px 15px;
 `;
 
 const Logo = styled.h1`

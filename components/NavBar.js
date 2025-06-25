@@ -20,12 +20,10 @@ const Bar = styled.ul`
   margin-top: 5px;
   font-size: 1.5em;
   & > li {
-    text-decoration: underline;
-    text-decoration-color: #eee;
-    transition: text-decoration 0.2s;
+    transition: font-size 0.3s;
     &:hover {
       cursor: pointer;
-      text-decoration-color: #222;
+      font-size: 1.5em;
     }
   }
 `;
