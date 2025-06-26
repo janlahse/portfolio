@@ -41,7 +41,7 @@ const Links = styled.section`
   justify-content: center;
   align-items: flex-end;
   gap: 10px;
-  @media (min-width: 415px) {
+  @media (min-width: 650px) {
     justify-content: flex-end;
   }
 `;
