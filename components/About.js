@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Tag from "./Tag";
 
 export default function About() {
   return (
@@ -19,5 +20,5 @@ const IntroText = styled.p`
   font-size: 1.4em;
   line-height: 1.4em;
   max-width: 600px;
-  border-left: 4px solid #222;
+  border-left: 5px solid #222;
 `;

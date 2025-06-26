@@ -1,19 +1,22 @@
 import About from "@/components/About";
+import TechStack from "@/components/TechStack";
 import styled from "styled-components";
 
 export default function Home() {
   return (
     <Main>
       <About />
+      <TechStack />
     </Main>
   );
 }
 
 const Main = styled.section`
-  margin: 110px 17px 30px;
+  margin: 115px 15px 55px;
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+  gap: 20px;
   @media (min-width: 650px) {
-    margin-top: 75px;
+    margin-top: 80px;
   }
 `;
