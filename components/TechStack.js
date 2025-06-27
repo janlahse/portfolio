@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import TagList from "./TagList";
 
 const skills = [
@@ -17,13 +16,9 @@ const skills = [
 
 export default function TechStack() {
   return (
-    <StyledSection>
+    <section>
       <h2>Tech Stack</h2>
       <TagList tags={skills} />
-    </StyledSection>
+    </section>
   );
 }
-
-const StyledSection = styled.section`
-  max-width: 600px;
-`;

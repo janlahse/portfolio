@@ -22,4 +22,7 @@ const Main = styled.section`
   @media (min-width: 650px) {
     margin: 55px 15px 5px;
   }
+  & > * {
+    max-width: 600px;
+  }
 `;

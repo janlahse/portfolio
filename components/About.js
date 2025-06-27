@@ -20,6 +20,5 @@ const IntroText = styled.p`
   padding: 0 20px;
   font-size: 1.4em;
   line-height: 1.4em;
-  max-width: 600px;
   border-left: 5px solid #222;
 `;
