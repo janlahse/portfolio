@@ -25,7 +25,7 @@ const Bar = styled.ul`
   }
   & > li {
     transition: font-size 0.3s;
-    padding: 1px;
+    padding-bottom: 1px;
     &:hover {
       cursor: pointer;
       font-size: 1.5em;

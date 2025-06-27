@@ -12,7 +12,8 @@ export default function Home() {
 }
 
 const Main = styled.section`
-  margin: 115px 15px 55px;
+  margin: 115px 15px 5px;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   gap: 20px;

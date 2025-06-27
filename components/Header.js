@@ -17,7 +17,7 @@ const Container = styled.section`
   top: 0;
   left: 0;
   right: 0;
-  margin: 0 15px 5px;
+  margin: 0 15px 0;
   border-bottom: 5px solid #222;
   background-color: #f2f2f2;
   @media (min-width: 650px) {
