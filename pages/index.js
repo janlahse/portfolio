@@ -1,10 +1,12 @@
 import About from "@/components/About";
+import Projects from "@/components/Projects";
 import TechStack from "@/components/TechStack";
 import styled from "styled-components";
 
 export default function Home() {
   return (
     <Main>
+      <Projects />
       <About />
       <TechStack />
     </Main>
@@ -12,12 +14,15 @@ export default function Home() {
 }
 
 const Main = styled.section`
-  margin: 115px 15px 5px;
-  padding-bottom: 50px;
+  margin: 90px 15px 5px;
+  padding-bottom: 60px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   @media (min-width: 650px) {
-    margin-top: 80px;
+    margin: 55px 15px 5px;
+  }
+  & > * {
+    max-width: 600px;
   }
 `;
