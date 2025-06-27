@@ -17,5 +17,5 @@ const List = styled.ul`
   justify-content: flex-start;
   align-items: flex-start;
   gap: 8px;
-  padding: 10px 0;
+  padding: 0;
 `;

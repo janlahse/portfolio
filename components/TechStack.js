@@ -18,7 +18,7 @@ const skills = [
 export default function TechStack() {
   return (
     <StyledSection>
-      <Heading>Tech Stack</Heading>
+      <h2>Tech Stack</h2>
       <TagList tags={skills} />
     </StyledSection>
   );
@@ -27,5 +27,3 @@ export default function TechStack() {
 const StyledSection = styled.section`
   max-width: 600px;
 `;
-
-const Heading = styled.h2``;
