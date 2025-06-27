@@ -28,10 +28,10 @@ export default function Footer() {
 }
 
 const Container = styled.section`
-  position: fixed;
-  bottom: 0;
   width: 100%;
   background-color: #f2f2f2;
+  position: absolute;
+  bottom: 0;
 `;
 
 const Links = styled.section`
