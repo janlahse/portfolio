@@ -1,14 +1,11 @@
 import styled from "styled-components";
-import { Lexend } from "next/font/google";
 import NavBar from "./NavBar";
-
-const lexend = Lexend({ subsets: ["latin"] });
 
 export default function Header() {
   return (
     <>
       <Container>
-        <Logo className={lexend.className}>Jan Lahse</Logo>
+        <Logo>Jan Lahse</Logo>
         <NavBar />
       </Container>
     </>
@@ -32,6 +29,7 @@ const Container = styled.section`
 
 const Logo = styled.h1`
   font-size: 2.5em;
+  font-family: "Lexend", Helvetica;
   padding-top: 5px;
   color: #222;
   text-align: center;

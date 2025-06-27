@@ -10,7 +10,7 @@ const StyledTag = styled.li`
   list-style: none;
   padding: 8px 10px;
   border-radius: 4px;
-  font-size: 1.3em;
+  font-size: 0.9em;
   font-weight: bold;
-  font-family: monospace;
+  font-family: "Space Mono", monospace;
 `;
