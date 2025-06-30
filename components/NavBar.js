@@ -24,11 +24,14 @@ const Bar = styled.ul`
     max-width: 400px;
   }
   & > li {
-    transition: font-size 0.3s;
+    transition: font-size 0.3s, transform 0.2s;
     padding-bottom: 1px;
     &:hover {
       cursor: pointer;
       font-size: 1.5em;
+    }
+    &:active {
+      transform: scale(0.92);
     }
   }
 `;
