@@ -5,11 +5,11 @@ export default function Tag({ skill }) {
 }
 
 const StyledTag = styled.li`
-  border: 2px solid #444;
-  background-color: #ddd;
+  border: 1.5px solid #333;
+  background-color: #e0e0e0;
   list-style: none;
-  padding: 8px 10px;
-  border-radius: 4px;
+  padding: 4px 12px;
+  border-radius: 20px;
   font-size: 0.9em;
   font-weight: bold;
   font-family: "Space Mono", monospace;
