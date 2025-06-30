@@ -1,11 +1,10 @@
 import { useState } from "react";
 import styled from "styled-components";
 
-export default function ProjectsNav() {
-  const [isWebsites, setIsWebsites] = useState(true);
+export default function ProjectsNav({ isWebsites, setIsWebsites }) {
   const [otherType, setOtherType] = useState("films");
   return (
-    <>
+    <section>
       <Navigation>
         <NavigationItem
           onClick={() => setIsWebsites(true)}
@@ -43,18 +42,19 @@ export default function ProjectsNav() {
           </NavigationItem>
         </Navigation>
       )}
-    </>
+    </section>
   );
 }
 
 const Navigation = styled.ul`
   padding: 0;
-  margin: 0 20%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  gap: 10px;
   list-style: none;
   font-weight: bold;
   font-size: 1.3em;
+  margin-bottom: 5px;
 `;
 
 const NavigationItem = styled.li`
