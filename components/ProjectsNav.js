@@ -54,7 +54,7 @@ const Navigation = styled.ul`
   list-style: none;
   font-weight: bold;
   font-size: 1.3em;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 `;
 
 const NavigationItem = styled.li`
