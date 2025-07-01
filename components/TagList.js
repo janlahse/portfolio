@@ -18,4 +18,5 @@ const List = styled.ul`
   align-items: flex-start;
   gap: 8px;
   padding: 0;
+  margin-bottom: auto;
 `;
