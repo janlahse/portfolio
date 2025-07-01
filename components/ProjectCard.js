@@ -8,7 +8,7 @@ export default function ProjectCard({ project }) {
     <Card>
       <Cover href="https://virtual-pet-care.vercel.app/">
         <CoverImage
-          src="/virtual_pet_care.png"
+          src={project.path}
           alt={project.title + " Cover Image"}
           width={1080}
           height={1080}
