@@ -1,17 +1,22 @@
 import styled from "styled-components";
 import TagList from "./TagList";
+import Image from "next/image";
+import Link from "next/link";
 
-export default function ProjectCard() {
+export default function ProjectCard({ project }) {
   return (
     <Card>
-      <PlaceHolder />
-      <Heading>Virtual Pet Care</Heading>
-      <Description>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua.
-      </Description>
-      <Tags tags={["HTML", "CSS", "JavaScript"]} />
+      <Cover href="https://virtual-pet-care.vercel.app/">
+        <CoverImage
+          src="/virtual_pet_care.png"
+          alt={project.title + " Cover Image"}
+          width={1080}
+          height={1080}
+        />
+      </Cover>
+      <Heading>{project.title}</Heading>
+      <Description>{project.description}</Description>
+      <Tags tags={project.tags} />
     </Card>
   );
 }
@@ -19,7 +24,8 @@ export default function ProjectCard() {
 const Card = styled.section`
   display: grid;
   gap: 10px;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 70%;
+  grid-template-rows: auto auto 1fr;
   grid-template-areas: "image heading" "image description" "image tags";
   @media (max-width: 500px) {
     grid-template-columns: auto;
@@ -27,15 +33,17 @@ const Card = styled.section`
   }
 `;
 
-const PlaceHolder = styled.div`
-  background-color: #fff;
-  border: 2px solid #222;
-  border-radius: 5px;
+const Cover = styled(Link)`
   grid-area: image;
-  min-height: 100px;
-  min-width: 100px;
-  @media (max-width: 500px) {
-  }
+`;
+
+const CoverImage = styled(Image)`
+  height: 100%;
+  max-height: 200px;
+  width: 100%;
+  border: 1px solid #333;
+  border-radius: 10px;
+  object-fit: cover;
 `;
 
 const Heading = styled.h3`
