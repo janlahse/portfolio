@@ -1,19 +1,11 @@
 import styled from "styled-components";
 import TagList from "./TagList";
-import Image from "next/image";
-import Link from "next/link";
+import ProjectsLinks from "./ProjectLinks";
 
 export default function ProjectCard({ project }) {
   return (
     <Card>
-      <Cover href="https://virtual-pet-care.vercel.app/">
-        <CoverImage
-          src={project.path}
-          alt={project.title + " Cover Image"}
-          width={1080}
-          height={1080}
-        />
-      </Cover>
+      <ProjectsLinks project={project} />
       <Heading>{project.title}</Heading>
       <Description>{project.description}</Description>
       <Tags tags={project.tags} />
@@ -31,19 +23,6 @@ const Card = styled.section`
     grid-template-columns: auto;
     grid-template-areas: "image" "heading" "description" "tags";
   }
-`;
-
-const Cover = styled(Link)`
-  grid-area: image;
-`;
-
-const CoverImage = styled(Image)`
-  height: 100%;
-  max-height: 200px;
-  width: 100%;
-  border: 1px solid #333;
-  border-radius: 10px;
-  object-fit: cover;
 `;
 
 const Heading = styled.h3`
