@@ -7,7 +7,7 @@ const ProjectList = [
     title: "Virtual Pet Care",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
-    path: "/virtual_pet_care.png",
+    path: "/virtual_pet_care.PNG",
     tags: ["HTML", "CSS", "JavaScript", "React", "Next.js"],
   },
 ];
