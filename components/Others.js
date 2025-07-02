@@ -1,20 +1,27 @@
+import { useState } from "react";
 import styled from "styled-components";
-import OthersNav from "./Others";
 
-export default function ProjectsNav({ isWebsites, setIsWebsites }) {
+export default function Others() {
+  const [otherType, setOtherType] = useState("films");
   return (
     <Navigation>
       <NavigationItem
-        onClick={() => setIsWebsites(true)}
-        $isActive={isWebsites}
+        onClick={() => setOtherType("films")}
+        $isActive={otherType === "films"}
       >
-        Websites
+        Films
       </NavigationItem>
       <NavigationItem
-        onClick={() => setIsWebsites(false)}
-        $isActive={!isWebsites}
+        onClick={() => setOtherType("games")}
+        $isActive={otherType === "games"}
       >
-        Other
+        Games
+      </NavigationItem>
+      <NavigationItem
+        onClick={() => setOtherType("art")}
+        $isActive={otherType === "art"}
+      >
+        Art
       </NavigationItem>
     </Navigation>
   );
