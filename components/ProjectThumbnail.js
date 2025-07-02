@@ -61,6 +61,7 @@ const Thumbnail = styled.section`
 
 const LinksOverlay = styled.ul`
   position: absolute;
+  top: -100%;
   padding: 0;
   background-color: #f2f2f2;
   opacity: 0.8;
@@ -68,7 +69,7 @@ const LinksOverlay = styled.ul`
   height: 100%;
   border-radius: 10px;
   list-style: none;
-  ${(props) => !props.$showLinks && "transform: translate(0, -100%);"};
+  ${(props) => props.$showLinks && "transform: translate(0, 100%);"};
   transition: transform 0.5s ease;
   display: flex;
   justify-content: center;
