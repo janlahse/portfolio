@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import TagList from "./TagList";
-import ProjectsLinks from "./ProjectLinks";
+import ProjectThumbnail from "./ProjectThumbnail";
 
 export default function ProjectCard({ project }) {
   return (
     <Card>
-      <ProjectsLinks project={project} />
+      <ProjectThumbnail project={project} />
       <Heading>{project.title}</Heading>
       <Description>{project.description}</Description>
       <Tags tags={project.tags} />
