@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectsNav from "./ProjectsNav";
+import Others from "./Others";
 
 const ProjectList = [
   {
@@ -18,7 +19,7 @@ export default function Projects() {
     <section>
       <h2>Projects</h2>
       <ProjectsNav isWebsites={isWebsites} setIsWebsites={setIsWebsites} />
-      {isWebsites && <ProjectCard project={ProjectList[0]} />}
+      {isWebsites ? <ProjectCard project={ProjectList[0]} /> : <Others />}
     </section>
   );
 }
