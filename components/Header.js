@@ -6,7 +6,7 @@ export default function Header() {
     <>
       <Container>
         <Logo>Jan Lahse</Logo>
-        <NavBar />
+        <NavBar isHeaderNav={true} />
       </Container>
     </>
   );

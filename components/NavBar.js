@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export default function NavBar() {
+export default function NavBar({ isHeaderNav }) {
   return (
-    <Bar>
+    <Bar $isHeaderNav={isHeaderNav}>
       <li>Projects</li>
       <li>About</li>
       <li>Stack</li>
@@ -12,16 +12,25 @@ export default function NavBar() {
 }
 
 const Bar = styled.ul`
+  position: fixed;
+  margin: 0 15px;
+  inset: auto 0 0 0;
+  z-index: 1;
   flex-grow: 1;
-  display: flex;
+  display: ${(props) => (props.$isHeaderNav ? "none;" : "flex;")};
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
+  height: 40px;
+  background-color: #f2f2f2;
   list-style: none;
-  height: 35px;
-  padding: 0;
+  padding: 0 0 2px 0;
   font-size: 1.5em;
   @media (min-width: 650px) {
+    display: ${(props) => (props.$isHeaderNav ? "flex;" : "none;")};
     max-width: 400px;
+    align-items: flex-end;
+    position: static;
+    margin: 0;
   }
   & > li {
     transition: font-size 0.3s, transform 0.2s;
