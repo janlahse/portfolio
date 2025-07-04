@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import ContactForm from "@/components/ContactForm";
 import NavBar from "@/components/NavBar";
 import Projects from "@/components/Projects";
 import TechStack from "@/components/TechStack";
@@ -10,6 +11,7 @@ export default function Home() {
       <Projects />
       <About />
       <TechStack />
+      <ContactForm />
       <NavBar isHeaderNav={false} />
     </Main>
   );

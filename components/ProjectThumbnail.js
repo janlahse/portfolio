@@ -56,7 +56,7 @@ const Thumbnail = styled.section`
   border-radius: 10px;
   position: relative;
   max-height: 200px;
-  border: 1px solid #333;
+  border: 1.5px solid #333;
 `;
 
 const LinksOverlay = styled.ul`

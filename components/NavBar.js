@@ -33,7 +33,7 @@ const Bar = styled.ul`
     margin: 0;
   }
   & > li {
-    transition: font-size 0.3s, transform 0.2s;
+    transition: font-size 0.3s ease, transform 0.2s ease;
     padding-bottom: 1px;
     &:hover {
       cursor: pointer;

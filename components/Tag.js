@@ -5,7 +5,7 @@ export default function Tag({ skill }) {
 }
 
 const StyledTag = styled.li`
-  border: 1.5px solid #333;
+  border: 2px solid #333;
   background-color: #e0e0e0;
   list-style: none;
   padding: 4px 12px;
