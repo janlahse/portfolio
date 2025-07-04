@@ -43,6 +43,7 @@ const SubmitButton = styled.button`
   border: 2px solid #222;
   border-radius: 3px;
   padding: 5px 0;
+  color: #222;
   transition: transform 0.2s ease, background-color 0.2s ease;
   &:active {
     transform: scale(0.92, 0.92);
