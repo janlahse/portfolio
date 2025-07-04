@@ -28,15 +28,18 @@ export default function Footer() {
 }
 
 const Container = styled.section`
-  width: 100%;
-  background-color: #f2f2f2;
-  position: absolute;
+  position: sticky;
   bottom: 0;
+  margin: 0 15px 40px 15px;
+  background-color: #f2f2f2;
+  border-top: 5px solid #222;
+  @media (min-width: 650px) {
+    position: static;
+    margin: 0 15px;
+  }
 `;
 
 const Links = styled.section`
-  border-top: 5px solid #222;
-  margin: 0 15px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
