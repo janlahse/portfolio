@@ -15,10 +15,7 @@ export default function Header() {
 const Container = styled.section`
   z-index: 1;
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0 15px 0;
+  inset: 0 15px auto;
   border-bottom: 5px solid #222;
   background-color: #f2f2f2;
   @media (min-width: 650px) {

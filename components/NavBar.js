@@ -13,14 +13,13 @@ export default function NavBar({ isHeaderNav }) {
 
 const Bar = styled.ul`
   position: fixed;
-  margin: 0 15px;
-  inset: auto 0 0 0;
+  inset: auto 15px 0 15px;
   z-index: 1;
   flex-grow: 1;
   display: ${(props) => (props.$isHeaderNav ? "none;" : "flex;")};
   justify-content: space-between;
   align-items: center;
-  height: 40px;
+  height: 45px;
   background-color: #f2f2f2;
   list-style: none;
   padding: 0 0 2px 0;
