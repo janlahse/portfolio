@@ -14,9 +14,9 @@ const skills = [
   "Blender",
 ];
 
-export default function TechStack() {
+export default function TechStack({ stackRef }) {
   return (
-    <section>
+    <section ref={stackRef}>
       <h2>Tech Stack</h2>
       <TagList tags={skills} />
     </section>

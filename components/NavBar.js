@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-export default function NavBar({ isHeaderNav }) {
+export default function NavBar({ isHeaderNav, handleScroll }) {
   return (
     <Bar $isHeaderNav={isHeaderNav}>
-      <li>Projects</li>
-      <li>About</li>
-      <li>Stack</li>
-      <li>Contact</li>
+      <li onClick={() => handleScroll("projects")}>Projects</li>
+      <li onClick={() => handleScroll("about")}>About</li>
+      <li onClick={() => handleScroll("stack")}>Stack</li>
+      <li onClick={() => handleScroll("contact")}>Contact</li>
     </Bar>
   );
 }

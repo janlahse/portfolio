@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import NavBar from "./NavBar";
 
-export default function Header() {
+export default function Header({ handleScroll }) {
   return (
     <>
       <Container>
         <Logo>Jan Lahse</Logo>
-        <NavBar isHeaderNav={true} />
+        <NavBar isHeaderNav={true} handleScroll={handleScroll} />
       </Container>
     </>
   );

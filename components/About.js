@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import Tag from "./Tag";
 
-export default function About() {
+export default function About({ aboutRef }) {
   return (
-    <section>
+    <section ref={aboutRef}>
       <h2>About</h2>
       <IntroText>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy

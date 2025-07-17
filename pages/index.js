@@ -6,17 +6,23 @@ import TechStack from "@/components/TechStack";
 import styled from "styled-components";
 import Head from "next/head";
 
-export default function Home() {
+export default function Home({
+  projectsRef,
+  aboutRef,
+  stackRef,
+  contactRef,
+  handleScroll,
+}) {
   return (
     <Main>
       <Head>
         <title>Jan Lahse</title>
       </Head>
-      <Projects />
-      <About />
-      <TechStack />
-      <ContactForm />
-      <NavBar isHeaderNav={false} />
+      <Projects projectsRef={projectsRef} />
+      <About aboutRef={aboutRef} />
+      <TechStack stackRef={stackRef} />
+      <ContactForm contactRef={contactRef} />
+      <NavBar isHeaderNav={false} handleScroll={handleScroll} />
     </Main>
   );
 }
@@ -29,5 +35,6 @@ const Main = styled.section`
   gap: 10px;
   & > * {
     max-width: 600px;
+    scroll-margin-top: 55px;
   }
 `;
