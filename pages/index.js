@@ -4,10 +4,14 @@ import NavBar from "@/components/NavBar";
 import Projects from "@/components/Projects";
 import TechStack from "@/components/TechStack";
 import styled from "styled-components";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <Main>
+      <Head>
+        <title>Jan Lahse</title>
+      </Head>
       <Projects />
       <About />
       <TechStack />
