@@ -13,10 +13,10 @@ const ProjectList = [
   },
 ];
 
-export default function Projects() {
+export default function Projects({ projectsRef }) {
   const [isWebsites, setIsWebsites] = useState(true);
   return (
-    <section>
+    <section ref={projectsRef}>
       <h2>Projects</h2>
       <ProjectsNav isWebsites={isWebsites} setIsWebsites={setIsWebsites} />
       {isWebsites ? <ProjectCard project={ProjectList[0]} /> : <Others />}

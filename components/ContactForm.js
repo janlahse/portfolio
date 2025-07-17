@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-export default function ContactForm() {
+export default function ContactForm({ contactRef }) {
   function handleSubmit(event) {
     event.preventDefault();
     alert("The form is currently work in progress. Thanks for your patience!");
   }
   return (
-    <section>
+    <section ref={contactRef}>
       <h2>Contact</h2>
       <Form onSubmit={handleSubmit}>
         <label htmlFor="name">Name</label>
