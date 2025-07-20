@@ -12,7 +12,7 @@ export default function VideoOverlay({ source }) {
   return (
     <Overlay>
       <Background />
-      <Video controls>
+      <Video controls controlsList="nodownload">
         <source src={source} type="video/mp4" />
         Your browser does not support the video tag.
       </Video>
@@ -33,9 +33,10 @@ const Background = styled.div`
   position: fixed;
   inset: 0;
   background-color: #222;
-  opacity: 0.8;
+  opacity: 0.95;
 `;
 
 const Video = styled.video`
   max-width: 60vw;
+  z-index: 1;
 `;

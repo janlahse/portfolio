@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import OthersNav from "./Others";
 
 export default function ProjectsNav({ isWebsites, setIsWebsites }) {
   return (
