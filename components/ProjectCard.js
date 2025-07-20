@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import TagList from "./TagList";
 import ProjectThumbnail from "./ProjectThumbnail";
+import VideoOverlay from "./VideoOverlay";
 
 export default function ProjectCard({ project }) {
   return (
     <Card>
+      <VideoOverlay source="/work.mp4" />
       <ProjectThumbnail project={project} />
       <Heading>{project.title}</Heading>
       <Description>{project.description}</Description>
