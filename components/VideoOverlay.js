@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import styled from "styled-components";
 
-export default function VideoOverlay({ source }) {
+export default function VideoOverlay({ source, ref }) {
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => {
@@ -11,11 +11,11 @@ export default function VideoOverlay({ source }) {
 
   return (
     <Overlay>
-      <Background />
-      <Video controls controlsList="nodownload">
+      <Video controls controlsList="nodownload" ref={ref}>
         <source src={source} type="video/mp4" />
         Your browser does not support the video tag.
       </Video>
+      <Background />
     </Overlay>
   );
 }
