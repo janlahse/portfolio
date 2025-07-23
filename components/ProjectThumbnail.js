@@ -85,6 +85,5 @@ const Logo = styled(Image)`
 const CoverImage = styled(Image)`
   height: 100%;
   width: 100%;
-  border-radius: 10px;
   object-fit: cover;
 `;
