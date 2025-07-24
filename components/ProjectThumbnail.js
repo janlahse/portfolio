@@ -22,11 +22,18 @@ export default function ProjectThumbnail({ project }) {
     };
   }, [ref]);
 
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      setShowVideo(false);
+  useEffect(() => {
+    function handleKeyDown(event) {
+      if (event.key === "Escape") {
+        setShowVideo(false);
+      }
     }
-  });
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
 
   return (
     <Thumbnail
