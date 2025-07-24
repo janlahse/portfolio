@@ -11,7 +11,7 @@ export default function VideoOverlay({ source, ref }) {
 
   return (
     <Overlay>
-      <Video controls controlsList="nodownload" ref={ref}>
+      <Video controls autoPlay controlsList="nodownload" ref={ref}>
         <source src={source} type="video/mp4" />
         Your browser does not support the video tag.
       </Video>
@@ -22,8 +22,9 @@ export default function VideoOverlay({ source, ref }) {
 
 const Overlay = styled.section`
   position: fixed;
+  width: 100vw;
   inset: 0;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,6 +38,7 @@ const Background = styled.div`
 `;
 
 const Video = styled.video`
-  max-width: 60vw;
   z-index: 1;
+  width: 90%;
+  max-width: 720px;
 `;
