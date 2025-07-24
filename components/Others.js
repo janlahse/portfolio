@@ -1,29 +1,37 @@
 import { useState } from "react";
 import styled from "styled-components";
+import ProjectCard from "./ProjectCard";
 
-export default function Others() {
+export default function Others({ projectList }) {
   const [otherType, setOtherType] = useState("films");
   return (
-    <Navigation>
-      <NavigationItem
-        onClick={() => setOtherType("films")}
-        $isActive={otherType === "films"}
-      >
-        Films
-      </NavigationItem>
-      <NavigationItem
-        onClick={() => setOtherType("games")}
-        $isActive={otherType === "games"}
-      >
-        Games
-      </NavigationItem>
-      <NavigationItem
-        onClick={() => setOtherType("art")}
-        $isActive={otherType === "art"}
-      >
-        Art
-      </NavigationItem>
-    </Navigation>
+    <>
+      <Navigation>
+        <NavigationItem
+          onClick={() => setOtherType("films")}
+          $isActive={otherType === "films"}
+        >
+          Films
+        </NavigationItem>
+        <NavigationItem
+          onClick={() => setOtherType("games")}
+          $isActive={otherType === "games"}
+        >
+          Games
+        </NavigationItem>
+        <NavigationItem
+          onClick={() => setOtherType("art")}
+          $isActive={otherType === "art"}
+        >
+          Art
+        </NavigationItem>
+      </Navigation>
+      {projectList
+        .filter((project) => project.type == otherType)
+        .map((project) => (
+          <ProjectCard key={project.title} project={project} />
+        ))}
+    </>
   );
 }
 
