@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import styled from "styled-components";
+import ExternalCloseIcon from "./ExternalCloseIcon";
 
 export default function VideoOverlay({ source, ref }) {
   useEffect(() => {
@@ -11,6 +12,7 @@ export default function VideoOverlay({ source, ref }) {
 
   return (
     <Overlay>
+      <ExternalCloseIcon />
       <Video controls autoPlay controlsList="nodownload" ref={ref}>
         <source src={source} type="video/mp4" />
         Your browser does not support the video tag.
@@ -25,9 +27,9 @@ const Overlay = styled.section`
   width: 100vw;
   inset: 0;
   z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
+  justify-items: center;
 `;
 
 const Background = styled.div`
@@ -41,4 +43,6 @@ const Video = styled.video`
   z-index: 1;
   width: 90%;
   max-width: 720px;
+  grid-row: 2/3;
+  border-radius: 2px;
 `;
