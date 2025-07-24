@@ -22,6 +22,12 @@ export default function ProjectThumbnail({ project }) {
     };
   }, [ref]);
 
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      setShowVideo(false);
+    }
+  });
+
   return (
     <Thumbnail
       onClick={() =>
