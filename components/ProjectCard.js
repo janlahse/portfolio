@@ -13,7 +13,7 @@ export default function ProjectCard({ project }) {
   );
 }
 
-const Card = styled.section`
+const Card = styled.li`
   display: grid;
   gap: 10px;
   grid-template-columns: 1fr 70%;

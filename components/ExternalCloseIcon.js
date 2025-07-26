@@ -10,12 +10,10 @@ export default function ExternalCloseIcon() {
 
 const Icon = styled.svg`
   width: 40px;
-  height: 100%;
+  min-height: 40px;
+  justify-self: end;
+  margin: 20px;
   fill: #f2f2f2;
   z-index: 2;
   cursor: pointer;
-  grid-row: 3/4;
-  @media (min-width: 650px) {
-    grid-row: 1/2;
-  }
 `;

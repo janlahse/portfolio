@@ -43,12 +43,12 @@ export default function ProjectThumbnail({ project }) {
           : setShowVideo(true)
       }
     >
-      {showVideo && <VideoOverlay source="/work.mp4" ref={ref} />}
+      {showVideo && <VideoOverlay source={project.video} ref={ref} />}
       {project.type === "websites" && (
         <LinksOverlay ref={ref} showLinks={showLinks} />
       )}
       <CoverImage
-        src={project.path}
+        src={project.coverImage}
         alt={project.title + " Cover Image"}
         width={1080}
         height={1080}
@@ -70,5 +70,6 @@ const CoverImage = styled(Image)`
   height: 100%;
   width: 100%;
   object-fit: cover;
+  object-position: top;
   cursor: pointer;
 `;
