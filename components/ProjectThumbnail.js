@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import LinksOverlay from "./LinksOverlay";
 import VideoOverlay from "./VideoOverlay";
+import VideoOverlayProjectAugment from "./VideoOverlayProjectAugment";
 
 export default function ProjectThumbnail({ project }) {
   const [showLinks, setShowLinks] = useState(false);
@@ -43,7 +44,11 @@ export default function ProjectThumbnail({ project }) {
           : setShowVideo(true)
       }
     >
-      {showVideo && <VideoOverlay source={project.video} ref={ref} />}
+      {showVideo && project.id === "project_augment" ? (
+        <VideoOverlayProjectAugment ref={ref} />
+      ) : (
+        showVideo && <VideoOverlay source={project.video} ref={ref} />
+      )}
       {project.type === "websites" && (
         <LinksOverlay ref={ref} showLinks={showLinks} />
       )}
