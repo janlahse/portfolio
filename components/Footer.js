@@ -9,7 +9,7 @@ export default function Footer() {
         <Link href="https://github.com/janlahse">
           <Logo
             alt="GitHub Logo"
-            src="/github_logo.png"
+            src="/icons/github_logo.png"
             width={240}
             height={240}
           />
@@ -17,7 +17,7 @@ export default function Footer() {
         <Link href="https://www.linkedin.com/in/jan-lahse/">
           <Logo
             alt="LinkedIn Logo"
-            src="/linkedin_logo_blue.png"
+            src="/icons/linkedin_logo_blue.png"
             width={635}
             height={540}
           />

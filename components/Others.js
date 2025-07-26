@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import ProjectCard from "./ProjectCard";
+import ListedProjects from "./ListedProjects";
 
 export default function Others({ projectList }) {
   const [otherType, setOtherType] = useState("films");
@@ -26,11 +27,7 @@ export default function Others({ projectList }) {
           Art
         </NavigationItem>
       </Navigation>
-      {projectList
-        .filter((project) => project.type == otherType)
-        .map((project) => (
-          <ProjectCard key={project.title} project={project} />
-        ))}
+      <ListedProjects projectList={projectList} projectType={otherType} />
     </>
   );
 }

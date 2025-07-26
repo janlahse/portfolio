@@ -41,8 +41,9 @@ const Background = styled.div`
 
 const Video = styled.video`
   z-index: 1;
-  width: 90%;
-  max-width: 720px;
+  max-width: 90%;
+  max-height: calc(100vh - 160px);
   grid-row: 2/3;
   border-radius: 2px;
+  object-fit: cover;
 `;

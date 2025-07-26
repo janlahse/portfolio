@@ -15,7 +15,7 @@ export default function LinksOverlay({ ref, showLinks }) {
         <Link href="https://github.com/janlahse/capstone-project">
           <Logo
             alt="GitHub Logo"
-            src="/github_logo.png"
+            src="/icons/github_logo.png"
             width={240}
             height={240}
           />
