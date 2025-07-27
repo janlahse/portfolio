@@ -28,7 +28,7 @@ export default function VideoOverlayProjectAugment({ ref }) {
             <DropdownButton>Tyra</DropdownButton>
           </DropdownContent>
         </Dropdown>
-        <Video autoPlay controlsList="nodownload" loop>
+        <Video autoPlay playsInline controlsList="nodownload" loop>
           <source
             src={"/projects/project_augment/silva_drill_idle.mp4"}
             type="video/mp4"

@@ -13,7 +13,7 @@ export default function VideoOverlay({ source, ref }) {
   return (
     <Overlay>
       <ExternalCloseIcon />
-      <Video controls autoPlay controlsList="nodownload" ref={ref}>
+      <Video controls autoPlay playsInline controlsList="nodownload" ref={ref}>
         <source src={source} type="video/mp4" />
         Your browser does not support the video tag.
       </Video>
