@@ -14,14 +14,20 @@ export default function VideoOverlayProjectAugment({ ref }) {
     <Overlay>
       <ExternalCloseIcon />
       <VideoContainer ref={ref}>
-        <FirstVideoNav>
-          <option>Silva</option>
-          <option>Tyra</option>
-        </FirstVideoNav>
-        <SecondVideoNav>
-          <option>Silva</option>
-          <option>Tyra</option>
-        </SecondVideoNav>
+        <Dropdown>
+          <FirstDropdownButton>Character</FirstDropdownButton>
+          <DropdownContent className="dropdownContent">
+            <DropdownButton>Silva</DropdownButton>
+            <DropdownButton>Tyra</DropdownButton>
+          </DropdownContent>
+        </Dropdown>
+        <Dropdown>
+          <SecondDropdownButton>Animation</SecondDropdownButton>
+          <DropdownContent className="dropdownContent">
+            <DropdownButton>Silva</DropdownButton>
+            <DropdownButton>Tyra</DropdownButton>
+          </DropdownContent>
+        </Dropdown>
         <Video autoPlay controlsList="nodownload" loop>
           <source
             src={"/projects/project_augment/silva_drill_idle.mp4"}
@@ -61,30 +67,56 @@ const VideoContainer = styled.section`
   max-width: 90%;
 `;
 
-const FirstVideoNav = styled.select`
+const Dropdown = styled.section`
+  z-index: 2;
+  position: relative;
   grid-row: 1/2;
-  grid-column: span 1;
-  border-radius: 2px 0 0 0;
-  font-family: inherit;
   font-size: 1.8em;
+  color: #222;
+  border: none;
+  &:hover .dropdownContent {
+    display: flex;
+  }
+`;
+
+const DropdownButton = styled.button`
+  text-align: start;
+  font-family: inherit;
+  font-size: 1em;
   padding: 5px;
   background-color: #f2f2f2;
   color: #222;
-  appearance: none;
   border: none;
+  width: 100%;
+  cursor: pointer;
   &:hover {
     background-color: #ddd;
   }
 `;
 
-const SecondVideoNav = styled(FirstVideoNav)`
-  border-radius: 0 2px 0 0;
+const FirstDropdownButton = styled(DropdownButton)`
+  cursor: unset;
+  border-radius: 5px 0 0 0;
+`;
+
+const SecondDropdownButton = styled(FirstDropdownButton)`
+  border-radius: 0 5px 0 0;
+`;
+
+const DropdownContent = styled.section`
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  color: #222;
+  width: 100%;
 `;
 
 const Video = styled.video`
   grid-row: 2/3;
   grid-column: 1/3;
   max-height: calc(100vh - 160px);
-  border-radius: 0 0 2px 2px;
+  width: 100%;
+  border-radius: 0 0 3px 3px;
   object-fit: cover;
 `;
