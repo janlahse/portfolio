@@ -29,6 +29,15 @@ export const ProjectList = [
     tags: ["Blender"],
   },
   {
+    title: "Project Augment",
+    id: "project_augment",
+    type: "games",
+    description:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+    coverImage: "/projects/project_augment/project_augment.png",
+    tags: ["Unity", "Blender"],
+  },
+  {
     title: "Knock it Rocket",
     id: "knock_it_rocket",
     type: "games",
