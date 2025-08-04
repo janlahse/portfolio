@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
-import ExternalLinkIcon from "./ExternalLinkIcon";
+import ExternalLinkIcon from "./icons/ExternalLinkIcon";
 import Image from "next/image";
 
 export default function LinksOverlay({ ref, showLinks }) {

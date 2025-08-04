@@ -1,6 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
-import ExternalCloseIcon from "./CloseIcon";
+import ExternalCloseIcon from "./icons/CloseIcon";
+import DropdownIcon from "./icons/DropdownIcon";
+import { Characters } from "@/db/Characters";
 
 export default function VideoOverlayProjectAugment({ ref }) {
   useEffect(() => {
@@ -10,29 +12,48 @@ export default function VideoOverlayProjectAugment({ ref }) {
     };
   }, []);
 
+  const [character, setCharacter] = useState(Characters[0]);
+
   return (
     <Overlay>
       <ExternalCloseIcon />
       <VideoContainer ref={ref}>
         <Dropdown>
-          <FirstDropdownButton>Character</FirstDropdownButton>
+          <FirstDropdownButton>
+            Character
+            <DropdownIcon />
+          </FirstDropdownButton>
           <DropdownContent className="dropdownContent">
-            <DropdownButton>Silva</DropdownButton>
-            <DropdownButton>Tyra</DropdownButton>
+            {Characters.map((character) => (
+              <DropdownButton
+                key={character.name}
+                onClick={() => setCharacter(character)}
+              >
+                {character.name}
+              </DropdownButton>
+            ))}
           </DropdownContent>
         </Dropdown>
         <Dropdown>
-          <SecondDropdownButton>Animation</SecondDropdownButton>
+          <SecondDropdownButton>
+            Animation
+            <DropdownIcon />
+          </SecondDropdownButton>
           <DropdownContent className="dropdownContent">
             <DropdownButton>Silva</DropdownButton>
             <DropdownButton>Tyra</DropdownButton>
           </DropdownContent>
         </Dropdown>
-        <Video autoPlay playsInline controlsList="nodownload" loop>
-          <source
-            src={"/projects/project_augment/silva_drill_idle.mp4"}
-            type="video/mp4"
-          />
+        <Video
+          key={character.name}
+          autoPlay
+          playsInline
+          controlsList="nodownload"
+          loop
+          height="1080"
+          widht="1080"
+        >
+          <source src={character.animations[0].source} type="video/mp4" />
           Your browser does not support the video tag.
         </Video>
       </VideoContainer>
@@ -65,6 +86,8 @@ const VideoContainer = styled.section`
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
   max-width: 90%;
+  background-color: #f2f2f2;
+  border-radius: 3px;
 `;
 
 const Dropdown = styled.section`
@@ -73,7 +96,6 @@ const Dropdown = styled.section`
   grid-row: 1/2;
   font-size: 1.8em;
   color: #222;
-  border: none;
   &:hover .dropdownContent {
     display: flex;
   }
@@ -83,9 +105,7 @@ const DropdownButton = styled.button`
   text-align: start;
   font-family: inherit;
   font-size: 1em;
-  padding: 5px;
-  background-color: #f2f2f2;
-  color: #222;
+  padding: 5px 10px;
   border: none;
   width: 100%;
   cursor: pointer;
@@ -97,6 +117,9 @@ const DropdownButton = styled.button`
 const FirstDropdownButton = styled(DropdownButton)`
   cursor: unset;
   border-radius: 5px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const SecondDropdownButton = styled(FirstDropdownButton)`
@@ -107,8 +130,8 @@ const DropdownContent = styled.section`
   position: absolute;
   display: none;
   flex-direction: column;
+  font-size: 0.8em;
   background-color: #f2f2f2;
-  color: #222;
   width: 100%;
 `;
 
@@ -117,6 +140,7 @@ const Video = styled.video`
   grid-column: 1/3;
   max-height: calc(100vh - 160px);
   width: 100%;
+  aspect-ratio: 1;
   border-radius: 0 0 3px 3px;
   object-fit: cover;
 `;
