@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import styled from "styled-components";
-import ExternalCloseIcon from "./ExternalCloseIcon";
+import ExternalCloseIcon from "./icons/CloseIcon";
 
 export default function VideoOverlay({ source, ref }) {
   useEffect(() => {

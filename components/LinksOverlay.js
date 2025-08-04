@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
-import ExternalLinkIcon from "./ExternalLinkIcon";
+import ExternalLinkIcon from "./icons/ExternalLinkIcon";
 import Image from "next/image";
 
 export default function LinksOverlay({ ref, showLinks }) {
@@ -40,7 +40,7 @@ const Overlay = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 `;
 
 const Logo = styled(Image)`
