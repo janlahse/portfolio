@@ -12,7 +12,10 @@ export default function VideoOverlayProjectAugment({ ref }) {
     };
   }, []);
 
-  const [character, setCharacter] = useState(Characters[0]);
+  const [characterAnimation, setCharacterAnimation] = useState({
+    character: Characters[0],
+    animation: 0,
+  });
 
   return (
     <Overlay>
@@ -27,7 +30,12 @@ export default function VideoOverlayProjectAugment({ ref }) {
             {Characters.map((character) => (
               <DropdownButton
                 key={character.name}
-                onClick={() => setCharacter(character)}
+                onClick={() =>
+                  setCharacterAnimation({
+                    character: character,
+                    animation: 0,
+                  })
+                }
               >
                 {character.name}
               </DropdownButton>
@@ -40,12 +48,27 @@ export default function VideoOverlayProjectAugment({ ref }) {
             <DropdownIcon />
           </SecondDropdownButton>
           <DropdownContent className="dropdownContent">
-            <DropdownButton>Silva</DropdownButton>
-            <DropdownButton>Tyra</DropdownButton>
+            {characterAnimation.character.animations.map((animation, index) => (
+              <DropdownButton
+                key={animation.name}
+                onClick={() =>
+                  setCharacterAnimation({
+                    character: characterAnimation.character,
+                    animation: index,
+                  })
+                }
+              >
+                {animation.name}
+              </DropdownButton>
+            ))}
           </DropdownContent>
         </Dropdown>
         <Video
-          key={character.name}
+          key={
+            characterAnimation.character.animations[
+              characterAnimation.animation
+            ].source
+          }
           autoPlay
           playsInline
           controlsList="nodownload"
@@ -53,7 +76,14 @@ export default function VideoOverlayProjectAugment({ ref }) {
           height="1080"
           widht="1080"
         >
-          <source src={character.animations[0].source} type="video/mp4" />
+          <source
+            src={
+              characterAnimation.character.animations[
+                characterAnimation.animation
+              ].source
+            }
+            type="video/mp4"
+          />
           Your browser does not support the video tag.
         </Video>
       </VideoContainer>
@@ -105,6 +135,7 @@ const DropdownButton = styled.button`
   text-align: start;
   font-family: inherit;
   font-size: 1em;
+  color: #222;
   padding: 5px 10px;
   border: none;
   width: 100%;
