@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
-import ProjectCard from "./ProjectCard";
 import ListedProjects from "./ListedProjects";
+import Art from "./Art";
 
 export default function Others({ projectList }) {
   const [otherType, setOtherType] = useState("films");
@@ -27,7 +27,11 @@ export default function Others({ projectList }) {
           Art
         </NavigationItem>
       </Navigation>
-      <ListedProjects projectList={projectList} projectType={otherType} />
+      {otherType === "art" ? (
+        <Art />
+      ) : (
+        <ListedProjects projectList={projectList} projectType={otherType} />
+      )}
     </>
   );
 }

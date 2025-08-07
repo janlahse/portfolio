@@ -1,6 +1,5 @@
 export const Characters = [
   {
-    // idle run attack spell1 spell2 hit
     name: "Hero A",
     animations: [
       {

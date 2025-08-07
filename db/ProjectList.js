@@ -7,6 +7,7 @@ export const ProjectList = [
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
     coverImage: "/projects/virtual_pet_care.PNG",
     tags: ["HTML", "CSS", "JavaScript", "React", "Next.js"],
+    thumbnailBorder: true,
   },
   {
     title: "Work in Progress",
