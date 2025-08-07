@@ -167,6 +167,7 @@ const DropdownContent = styled.section`
 `;
 
 const Video = styled.video`
+  background-color: #f2f2f2;
   grid-row: 2/3;
   grid-column: 1/3;
   max-height: calc(100vh - 160px);

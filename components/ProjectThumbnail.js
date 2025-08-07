@@ -43,6 +43,7 @@ export default function ProjectThumbnail({ project }) {
           ? setShowLinks(!showLinks)
           : setShowVideo(true)
       }
+      $border={project.thumbnailBorder}
     >
       {showVideo && project.id === "project_augment" ? (
         <VideoOverlayProjectAugment ref={ref} />
@@ -68,7 +69,7 @@ const Thumbnail = styled.section`
   border-radius: 10px;
   position: relative;
   max-height: 200px;
-  border: 1.5px solid #999;
+  ${(props) => props.$border && "border: 1.5px solid #999;"}
 `;
 
 const CoverImage = styled(Image)`
