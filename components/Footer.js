@@ -6,6 +6,9 @@ export default function Footer() {
   return (
     <Container>
       <Links>
+        <ImpressumLink href="/impressum">
+          Legal Disclosure / Impressum
+        </ImpressumLink>
         <Link href="https://github.com/janlahse">
           <Logo
             alt="GitHub Logo"
@@ -41,12 +44,20 @@ const Container = styled.section`
 
 const Links = styled.section`
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: flex-end;
   gap: 10px;
   @media (min-width: 650px) {
     justify-content: flex-end;
   }
+`;
+
+const ImpressumLink = styled(Link)`
+  font-family: "Roboto", Helvetica;
+  text-decoration: none;
+  color: #666;
+  font-size: 1.2em;
+  font-weight: bold;
 `;
 
 const Logo = styled(Image)`

@@ -41,5 +41,4 @@ export default function App({ Component, pageProps }) {
 
 const Layout = styled.div`
   position: relative;
-  min-height: 100vh;
 `;

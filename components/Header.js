@@ -1,11 +1,14 @@
 import styled from "styled-components";
 import NavBar from "./NavBar";
+import Link from "next/link";
 
 export default function Header({ handleScroll }) {
   return (
     <>
       <Container>
-        <Logo>Jan Lahse</Logo>
+        <LogoLink href="/">
+          <Logo>Jan Lahse</Logo>
+        </LogoLink>
         <NavBar isHeaderNav={true} handleScroll={handleScroll} />
       </Container>
     </>
@@ -23,6 +26,10 @@ const Container = styled.section`
     justify-content: space-between;
     align-items: flex-end;
   }
+`;
+
+const LogoLink = styled(Link)`
+  text-decoration: none;
 `;
 
 const Logo = styled.h1`
