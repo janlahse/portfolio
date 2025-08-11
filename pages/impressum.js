@@ -1,8 +1,13 @@
+import BackIcon from "@/components/icons/BackIcon";
+import Link from "next/link";
 import styled from "styled-components";
 
 export default function Impressum() {
   return (
     <Container>
+      <Link href="/">
+        <BackIcon />
+      </Link>
       <h1>Legal Disclosure / Impressum</h1>
       <br />
       <p>Jan Lahse</p>

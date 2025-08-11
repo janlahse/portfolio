@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import styled from "styled-components";
-import ExternalCloseIcon from "./icons/CloseIcon";
+import CloseIcon from "./icons/CloseIcon";
 
 export default function VideoOverlay({ source, ref }) {
   useEffect(() => {
@@ -12,7 +12,7 @@ export default function VideoOverlay({ source, ref }) {
 
   return (
     <Overlay>
-      <ExternalCloseIcon />
+      <CloseIcon />
       <Video controls autoPlay playsInline controlsList="nodownload" ref={ref}>
         <source src={source} type="video/mp4" />
         Your browser does not support the video tag.
