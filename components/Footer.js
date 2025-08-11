@@ -1,11 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import styled from "styled-components";
 
 export default function Footer() {
+  const router = useRouter();
+
   return (
-    <Container>
+    <Container $isImpressum={router.pathname === "/impressum"}>
       <Links>
+        <ImpressumLink href="/impressum">Impressum</ImpressumLink>
         <Link href="https://github.com/janlahse">
           <Logo
             alt="GitHub Logo"
@@ -30,7 +34,7 @@ export default function Footer() {
 const Container = styled.section`
   position: sticky;
   bottom: 0;
-  margin: 0 15px 40px 15px;
+  margin: 0 15px ${(props) => (props.$isImpressum ? "0px" : "40px")} 15px;
   background-color: #f2f2f2;
   border-top: 5px solid #222;
   @media (min-width: 650px) {
@@ -41,12 +45,19 @@ const Container = styled.section`
 
 const Links = styled.section`
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: flex-end;
   gap: 10px;
   @media (min-width: 650px) {
     justify-content: flex-end;
   }
+`;
+
+const ImpressumLink = styled(Link)`
+  font-family: "Roboto", Helvetica;
+  text-decoration: none;
+  color: #666;
+  font-size: 1.2em;
 `;
 
 const Logo = styled(Image)`

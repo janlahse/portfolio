@@ -1,12 +1,20 @@
 import styled from "styled-components";
 import NavBar from "./NavBar";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Header({ handleScroll }) {
+  const router = useRouter();
+
   return (
     <>
       <Container>
-        <Logo>Jan Lahse</Logo>
-        <NavBar isHeaderNav={true} handleScroll={handleScroll} />
+        <LogoLink href="/">
+          <Logo>Jan Lahse</Logo>
+        </LogoLink>
+        {router.pathname !== "/impressum" && (
+          <NavBar isHeaderNav={true} handleScroll={handleScroll} />
+        )}
       </Container>
     </>
   );
@@ -23,6 +31,10 @@ const Container = styled.section`
     justify-content: space-between;
     align-items: flex-end;
   }
+`;
+
+const LogoLink = styled(Link)`
+  text-decoration: none;
 `;
 
 const Logo = styled.h1`

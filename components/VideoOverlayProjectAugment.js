@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import ExternalCloseIcon from "./icons/CloseIcon";
 import DropdownIcon from "./icons/DropdownIcon";
 import { Characters } from "@/db/Characters";
+import CloseIcon from "./icons/CloseIcon";
 
 export default function VideoOverlayProjectAugment({ ref }) {
   useEffect(() => {
@@ -19,7 +19,7 @@ export default function VideoOverlayProjectAugment({ ref }) {
 
   return (
     <Overlay>
-      <ExternalCloseIcon />
+      <CloseIcon />
       <VideoContainer ref={ref}>
         <Dropdown>
           <FirstDropdownButton>
