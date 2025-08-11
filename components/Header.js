@@ -1,15 +1,20 @@
 import styled from "styled-components";
 import NavBar from "./NavBar";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Header({ handleScroll }) {
+  const router = useRouter();
+
   return (
     <>
       <Container>
         <LogoLink href="/">
           <Logo>Jan Lahse</Logo>
         </LogoLink>
-        <NavBar isHeaderNav={true} handleScroll={handleScroll} />
+        {router.pathname !== "/impressum" && (
+          <NavBar isHeaderNav={true} handleScroll={handleScroll} />
+        )}
       </Container>
     </>
   );
