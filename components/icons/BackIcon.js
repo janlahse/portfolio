@@ -9,9 +9,7 @@ export default function BackIcon() {
 }
 
 const Icon = styled.svg`
-  position: fixed;
-  top: 85px;
-  left: 30px;
+  margin: 80px 30px 15px;
   width: 20px;
   height: auto;
   fill: #222;
