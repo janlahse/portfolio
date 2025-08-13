@@ -32,13 +32,14 @@ export default function Footer() {
 }
 
 const Container = styled.section`
-  position: sticky;
+  position: ${(props) => (props.$isImpressum ? "fixed" : "sticky")};
+  ${(props) => props.$isImpressum && "width: calc(100% - 30px);"};
   bottom: 0;
   margin: 0 15px ${(props) => (props.$isImpressum ? "0px" : "40px")} 15px;
   background-color: #f2f2f2;
   border-top: 5px solid #222;
   @media (min-width: 650px) {
-    position: static;
+    position: ${(props) => (props.$isImpressum ? "fixed" : "static")};
     margin: 0 15px;
   }
 `;
