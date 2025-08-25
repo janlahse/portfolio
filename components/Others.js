@@ -4,21 +4,21 @@ import ListedProjects from "./ListedProjects";
 import Art from "./Art";
 
 export default function Others({ projectList }) {
-  const [otherType, setOtherType] = useState("films");
+  const [otherType, setOtherType] = useState("games");
   return (
     <>
       <Navigation>
-        <NavigationItem
-          onClick={() => setOtherType("films")}
-          $isActive={otherType === "films"}
-        >
-          Films
-        </NavigationItem>
         <NavigationItem
           onClick={() => setOtherType("games")}
           $isActive={otherType === "games"}
         >
           Games
+        </NavigationItem>
+        <NavigationItem
+          onClick={() => setOtherType("films")}
+          $isActive={otherType === "films"}
+        >
+          Films
         </NavigationItem>
         <NavigationItem
           onClick={() => setOtherType("art")}

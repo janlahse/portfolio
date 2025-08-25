@@ -13,7 +13,7 @@ export default function NavBar({ isHeaderNav, handleScroll }) {
 
 const Bar = styled.ul`
   position: fixed;
-  inset: auto 15px 0 15px;
+  inset: auto 15px 0;
   z-index: 1;
   flex-grow: 1;
   display: ${(props) => (props.$isHeaderNav ? "none;" : "flex;")};
@@ -24,6 +24,7 @@ const Bar = styled.ul`
   list-style: none;
   padding: 0 0 2px 0;
   font-size: 1.5em;
+  max-width: calc(100% - 30px);
   @media (min-width: 650px) {
     display: ${(props) => (props.$isHeaderNav ? "flex;" : "none;")};
     max-width: 400px;
