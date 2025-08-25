@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import TagList from "./TagList";
 
 const skills = [
