@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import ExternalLinkIcon from "./icons/ExternalLinkIcon";
 import Image from "next/image";
 
@@ -35,7 +35,7 @@ const Overlay = styled.ul`
   height: 100%;
   border-radius: 10px;
   list-style: none;
-  ${(props) => props.$showLinks && "transform: translate(0, 100%);"};
+  ${(props) => props.$showLinks && "transform: translate(0, 100%);"}
   transition: transform 0.5s ease;
   display: flex;
   justify-content: center;
