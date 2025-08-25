@@ -5,7 +5,7 @@ export default function TagList({ tags, isForTechStack }) {
   return (
     <List $isForTechStack={isForTechStack}>
       {tags.map((tag) => {
-        return <Tag skill={tag} isForTechStack={isForTechStack} key={tag} />;
+        return <Tag skill={tag} $isForTechStack={isForTechStack} key={tag} />;
       })}
     </List>
   );

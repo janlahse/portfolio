@@ -16,7 +16,7 @@ const Bar = styled.ul`
   inset: auto 15px 0;
   z-index: 1;
   flex-grow: 1;
-  display: ${(props) => (props.$isHeaderNav ? "none;" : "flex;")};
+  display: ${(props) => (props.$isHeaderNav ? "none" : "flex")};
   justify-content: space-between;
   align-items: center;
   height: 45px;
@@ -26,7 +26,7 @@ const Bar = styled.ul`
   font-size: 1.5em;
   max-width: calc(100% - 30px);
   @media (min-width: 650px) {
-    display: ${(props) => (props.$isHeaderNav ? "flex;" : "none;")};
+    display: ${(props) => (props.$isHeaderNav ? "flex" : "none")};
     max-width: 400px;
     align-items: flex-end;
     position: static;
