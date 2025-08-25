@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import TagList from "./TagList";
 
 const skills = [
@@ -18,7 +19,7 @@ export default function TechStack({ stackRef }) {
   return (
     <section ref={stackRef}>
       <h2>Tech Stack</h2>
-      <TagList tags={skills} />
+      <TagList tags={skills} isForTechStack />
     </section>
   );
 }

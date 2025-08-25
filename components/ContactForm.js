@@ -25,7 +25,6 @@ const Form = styled.form`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 15px;
-  font-size: 1.2em;
   & > input,
   textarea {
     border: 1.5px solid #222;

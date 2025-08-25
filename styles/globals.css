@@ -12,5 +12,18 @@ body {
 }
 
 h2 {
-  padding: 10px 0;
+  padding: 10px 0 15px;
+  font-size: 2.8em;
+  text-align: center;
+}
+
+@media (min-width: 650px) {
+  h2 {
+    text-align: left;
+  }
+}
+
+p,
+label {
+  font-size: 1.2em;
 }

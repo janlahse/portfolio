@@ -27,10 +27,12 @@ const Card = styled.li`
 
 const Heading = styled.h3`
   grid-area: heading;
+  font-size: 1.5em;
 `;
 
 const Description = styled.p`
   grid-area: description;
+  line-height: 1.3em;
 `;
 
 const Tags = styled(TagList)`
