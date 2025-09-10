@@ -17,7 +17,7 @@ const List = styled.ul`
   justify-content: flex-start;
   gap: 10px 12px;
   ${(props) =>
-    props.$isForTechStack && "justify-content: center; gap: 15px 20px;"}
+    props.$isForTechStack && "justify-content: center; gap: 20px 20px;"}
   align-items: flex-start;
   padding: 0;
   margin-bottom: auto;

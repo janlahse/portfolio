@@ -13,5 +13,5 @@ const StyledTag = styled.li`
   font-size: 0.9em;
   font-weight: bold;
   font-family: "Space Mono", monospace;
-  ${(props) => props.$isForTechStack && "padding: 6px 14px; font-size: 1.1em;"}
+  ${(props) => props.$isForTechStack && "padding: 6px 16px; font-size: 1em;"}
 `;
