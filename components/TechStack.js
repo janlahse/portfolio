@@ -1,17 +1,19 @@
 import TagList from "./TagList";
 
 const skills = [
+  "React",
+  "Next.js",
   "HTML",
   "CSS",
   "JavaScript",
-  "React",
-  "Next.js",
   "Node.js",
   "MongoDB",
+  "JSON",
   "GitHub",
   "Vercel",
   "Unity",
   "Blender",
+  "DaVinci Resolve",
 ];
 
 export default function TechStack({ stackRef }) {
