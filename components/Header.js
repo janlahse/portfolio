@@ -9,11 +9,15 @@ export default function Header({ handleScroll }) {
   return (
     <>
       <Container>
-        <LogoLink href="/">
-          <Logo>Jan Lahse</Logo>
-        </LogoLink>
-        {router.pathname !== "/impressum" && (
-          <NavBar isHeaderNav={true} handleScroll={handleScroll} />
+        {router.pathname === "/impressum" ? (
+          <LogoLink href="/">
+            <Logo>Jan Lahse</Logo>
+          </LogoLink>
+        ) : (
+          <>
+            <Logo onClick={() => handleScroll("landing")}>Jan Lahse</Logo>
+            <NavBar isHeaderNav={true} handleScroll={handleScroll} />
+          </>
         )}
       </Container>
     </>
@@ -43,6 +47,7 @@ const Logo = styled.h1`
   padding-top: 5px;
   color: #222;
   text-align: center;
+  cursor: pointer;
   @media (min-width: 650px) {
     text-align: left;
   }

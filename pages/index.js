@@ -5,8 +5,10 @@ import Projects from "@/components/Projects";
 import TechStack from "@/components/TechStack";
 import styled from "styled-components";
 import Head from "next/head";
+import LandingPage from "@/components/LandingPage";
 
 export default function Home({
+  landingRef,
   projectsRef,
   aboutRef,
   stackRef,
@@ -18,6 +20,7 @@ export default function Home({
       <Head>
         <title>Jan Lahse</title>
       </Head>
+      <LandingPage landingRef={landingRef} handleScroll={handleScroll} />
       <Projects projectsRef={projectsRef} />
       <About aboutRef={aboutRef} />
       <TechStack stackRef={stackRef} />
