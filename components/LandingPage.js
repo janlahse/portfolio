@@ -1,34 +1,50 @@
 import styled from "styled-components";
 
-export default function LandingPage({ landingRef }) {
+export default function LandingPage({ landingRef, handleScroll }) {
   return (
     <Container ref={landingRef}>
-      <TextOne>Hi, I&apos;m Jan. </TextOne>
-      <TextTwo>I create responsive web apps with React and Next.js</TextTwo>
-      <TextThree>
-        Check out my work and feel free to reach out about bringing your project
-        to life.
-      </TextThree>
+      <Heading>
+        Hi, I am <Span onClick={() => handleScroll("about")}>Jan</Span>.
+      </Heading>
+      <Paragraph>
+        I create responsive web apps with{" "}
+        <Span onClick={() => handleScroll("stack")}>React</Span>. Check out my{" "}
+        <Span onClick={() => handleScroll("projects")}>work</Span> and feel free
+        to <Span onClick={() => handleScroll("contact")}>reach out</Span> about{" "}
+        bringing your project to life.
+      </Paragraph>
     </Container>
   );
 }
 
 const Container = styled.section`
-  min-height: calc(100vh - 120px);
+  min-height: calc(100vh - 135px);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @media (min-width: 650px) {
+    min-height: calc(100vh - 95px);
+  }
 `;
 
-const TextOne = styled.h3`
-  font-size: 7em;
+const Heading = styled.h3`
+  font-size: 60px;
+  font-weight: 300;
+  @media (min-width: 650px) {
+    font-size: 100px;
+  }
 `;
 
-const TextTwo = styled.h3`
-  font-size: 3.4em;
-  padding: 23px 0 40px;
+const Paragraph = styled.p`
+  font-size: 40px;
+  padding: 0;
+  font-weight: 300;
+  @media (min-width: 650px) {
+    font-size: 48px;
+  }
 `;
 
-const TextThree = styled.h3`
-  font-size: 2em;
+const Span = styled.span`
+  color: #222299;
+  cursor: pointer;
 `;

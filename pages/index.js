@@ -20,7 +20,7 @@ export default function Home({
       <Head>
         <title>Jan Lahse</title>
       </Head>
-      <LandingPage landingRef={landingRef} />
+      <LandingPage landingRef={landingRef} handleScroll={handleScroll} />
       <Projects projectsRef={projectsRef} />
       <About aboutRef={aboutRef} />
       <TechStack stackRef={stackRef} />

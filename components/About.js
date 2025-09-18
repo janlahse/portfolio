@@ -5,17 +5,18 @@ export default function About({ aboutRef }) {
     <section ref={aboutRef}>
       <h2>About</h2>
       <IntroText>
-        I&apos;m Jan, a Frontend Web Developer from Germany with a background in
-        Digital Media and Computer Science. I create responsive web apps using
-        React and Next.js, with a strong focus on clean code and accessibility.
+        I&apos;m an aspiring frontend web developer from Germany. While studying
+        Digital Media and Computer Science, even though I had already built a
+        few websites, my main focus was on game development and 3D animation. So
+        after finishing my studies, in an effort to showcase this work, I sat
+        down to create my first portfolio website.
         <br />
         <br />
-        In 2024, I created my first portfolio website to showcase my work, which
-        was mostly about game development and 3D films. And that&apos;s when it
-        hit me. I had so much fun building that website, expanding my knowledge
-        of HTML, CSS and JavaScript while finding ways to connect design and
-        functionality, and in no time I got hooked. I was proud of what I did,
-        curious about what else I could do and eager to dig deeper. So I did.
+        And that&apos;s when it hit me. I had so much fun building that website,
+        expanding my knowledge of HTML, CSS and JavaScript while finding ways to
+        connect design and functionality, that I got hooked in no time. I was
+        proud of what I had done and curious about what else I could do. I knew
+        I had to dig deeper and so I did.
         <br />
         <br />
         I&apos;m an enthusiastic learner and a natural problem-solver. To me,
