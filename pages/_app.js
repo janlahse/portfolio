@@ -5,13 +5,16 @@ import styled from "styled-components";
 import { useRef } from "react";
 
 export default function App({ Component, pageProps }) {
+  const landingRef = useRef();
   const projectsRef = useRef();
   const aboutRef = useRef();
   const stackRef = useRef();
   const contactRef = useRef();
   function handleScroll(reference) {
     const element =
-      reference === "projects"
+      reference === "landing"
+        ? landingRef
+        : reference === "projects"
         ? projectsRef
         : reference === "about"
         ? aboutRef
@@ -28,6 +31,7 @@ export default function App({ Component, pageProps }) {
       <Header handleScroll={handleScroll} />
       <Component
         {...pageProps}
+        landingRef={landingRef}
         projectsRef={projectsRef}
         aboutRef={aboutRef}
         stackRef={stackRef}
