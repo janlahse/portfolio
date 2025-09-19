@@ -37,7 +37,7 @@ const Container = styled.section`
   bottom: 0;
   margin: 0 15px ${(props) => (props.$isImpressum ? "0px" : "40px")} 15px;
   background-color: #f2f2f2;
-  border-top: 5px solid #222;
+  border-top: 5px solid #3e3ea8;
   @media (min-width: 650px) {
     position: ${(props) => (props.$isImpressum ? "fixed" : "static")};
     margin: 0 15px;
