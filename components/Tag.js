@@ -5,8 +5,8 @@ export default function Tag({ skill, isForTechStack }) {
 }
 
 const StyledTag = styled.li`
-  border: 2px solid #333;
-  background-color: #e0e0e0;
+  border: 2px solid #222299;
+  background-color: #fff;
   list-style: none;
   padding: 4px 12px;
   border-radius: 30px;

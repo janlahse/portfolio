@@ -28,8 +28,9 @@ const Container = styled.section`
   z-index: 1;
   position: fixed;
   inset: 0 15px auto;
-  border-bottom: 5px solid #222;
+  border-bottom: 5px solid #3e3ea8;
   background-color: #f2f2f2;
+  padding: 0 calc((100vw - 845px) / 2);
   @media (min-width: 650px) {
     display: flex;
     justify-content: space-between;

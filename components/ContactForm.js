@@ -38,7 +38,7 @@ const SubmitButton = styled.button`
   grid-column: 2/3;
   font-family: inherit;
   font-size: 1.1em;
-  background-color: #fff;
+  background-color: #e0e0ff;
   border: 2px solid #222;
   border-radius: 3px;
   padding: 5px 0;
@@ -46,6 +46,6 @@ const SubmitButton = styled.button`
   transition: transform 0.2s ease, background-color 0.2s ease;
   &:active {
     transform: scale(0.92, 0.92);
-    background-color: #eee;
+    background-color: #ccccff;
   }
 `;

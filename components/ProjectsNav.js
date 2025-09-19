@@ -35,7 +35,7 @@ const NavigationItem = styled.li`
   border-bottom: 4px solid #f2f2f2;
   border-radius: 20px;
   padding: 5px 10px;
-  ${(props) => props.$isActive && "background-color: #ddd; "}
+  ${(props) => props.$isActive && "background-color: #D1D1FF; "}
   transition: transform 0.2s ease;
   &:active {
     transform: scale(0.92);
