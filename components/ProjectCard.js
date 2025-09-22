@@ -28,6 +28,7 @@ const Card = styled.li`
 const Heading = styled.h3`
   grid-area: heading;
   font-size: 1.5em;
+  font-weight: 500;
 `;
 
 const Description = styled.p`

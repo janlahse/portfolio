@@ -45,6 +45,6 @@ const Paragraph = styled.p`
 `;
 
 const Span = styled.span`
-  color: #222299;
+  color: hsl(240, 52%, 52%);
   cursor: pointer;
 `;

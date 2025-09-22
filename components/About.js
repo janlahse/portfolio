@@ -33,5 +33,5 @@ const IntroText = styled.p`
   padding: 0 20px;
   font-size: 1.2em;
   line-height: 1.3em;
-  border-left: 5px solid #3e3ea8;
+  border-left: 5px solid hsl(240, 65%, 60%);
 `;

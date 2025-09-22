@@ -38,14 +38,15 @@ const SubmitButton = styled.button`
   grid-column: 2/3;
   font-family: inherit;
   font-size: 1.1em;
-  background-color: #e0e0ff;
-  border: 2px solid #222;
+  font-weight: 450;
+  background-color: hsl(240, 65%, 60%);
+  border: none;
   border-radius: 3px;
   padding: 5px 0;
-  color: #111;
+  color: #fff;
   transition: transform 0.2s ease, background-color 0.2s ease;
   &:active {
     transform: scale(0.92, 0.92);
-    background-color: #ccccff;
+    background-color: hsl(240, 77.78%, 70%);
   }
 `;
