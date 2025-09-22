@@ -22,12 +22,15 @@ export default function ProjectsNav({ isWebsites, setIsWebsites }) {
 const Navigation = styled.ul`
   padding: 0;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 10px;
   list-style: none;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 1.3em;
   margin-bottom: 10px;
+  @media (min-width: 650px) {
+    justify-content: flex-start;
+  }
 `;
 
 const NavigationItem = styled.li`

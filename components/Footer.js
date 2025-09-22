@@ -37,7 +37,7 @@ const Container = styled.section`
   bottom: 0;
   margin: 0 15px ${(props) => (props.$isImpressum ? "0px" : "40px")} 15px;
   background-color: #f2f2f2;
-  border-top: 5px solid #3e3ea8;
+  border-top: 5px solid hsl(240, 65%, 60%);
   @media (min-width: 650px) {
     position: ${(props) => (props.$isImpressum ? "fixed" : "static")};
     margin: 0 15px;
@@ -57,8 +57,9 @@ const Links = styled.section`
 const ImpressumLink = styled(Link)`
   font-family: "Roboto", Helvetica;
   text-decoration: none;
-  color: #666;
+  color: #555;
   font-size: 1.2em;
+  font-weight: 350;
 `;
 
 const Logo = styled(Image)`

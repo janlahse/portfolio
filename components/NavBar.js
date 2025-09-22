@@ -24,6 +24,7 @@ const Bar = styled.ul`
   background-color: #f2f2f2;
   list-style: none;
   font-size: 1.5em;
+  font-weight: 400;
   @media (min-width: 650px) {
     display: ${(props) => (props.$isHeaderNav ? "flex" : "none")};
     max-width: 400px;
