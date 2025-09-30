@@ -38,7 +38,7 @@ const SubmitButton = styled.button`
   grid-column: 2/3;
   font-family: inherit;
   font-size: 1.1em;
-  font-weight: 450;
+  font-weight: 400;
   background-color: hsl(240, 65%, 60%);
   border: none;
   border-radius: 3px;

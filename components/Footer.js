@@ -55,11 +55,10 @@ const Links = styled.section`
 `;
 
 const ImpressumLink = styled(Link)`
-  font-family: "Roboto", Helvetica;
   text-decoration: none;
   color: #555;
   font-size: 1.2em;
-  font-weight: 350;
+  font-weight: 400;
 `;
 
 const Logo = styled(Image)`

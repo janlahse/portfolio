@@ -16,7 +16,7 @@ export default function Home({
   handleScroll,
 }) {
   return (
-    <Main>
+    <Container>
       <Head>
         <title>Jan Lahse</title>
       </Head>
@@ -26,11 +26,11 @@ export default function Home({
       <TechStack stackRef={stackRef} />
       <ContactForm contactRef={contactRef} />
       <NavBar isHeaderNav={false} handleScroll={handleScroll} />
-    </Main>
+    </Container>
   );
 }
 
-const Main = styled.section`
+const Container = styled.section`
   margin: 65px 15px 5px;
   padding-bottom: 10px;
   display: flex;

@@ -2,6 +2,13 @@ import styled from "styled-components";
 import NavBar from "./NavBar";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { Lexend } from "@next/font/google";
+
+const lexend = Lexend({
+  subsets: ["latin"],
+  weight: ["700"],
+  fallback: ["Helvetica"],
+});
 
 export default function Header({ handleScroll }) {
   const router = useRouter();
@@ -11,11 +18,16 @@ export default function Header({ handleScroll }) {
       <Container>
         {router.pathname === "/impressum" ? (
           <LogoLink href="/">
-            <Logo>Jan Lahse</Logo>
+            <Logo className={lexend.className}>Jan Lahse</Logo>
           </LogoLink>
         ) : (
           <>
-            <Logo onClick={() => handleScroll("landing")}>Jan Lahse</Logo>
+            <Logo
+              className={lexend.className}
+              onClick={() => handleScroll("landing")}
+            >
+              Jan Lahse
+            </Logo>
             <NavBar isHeaderNav={true} handleScroll={handleScroll} />
           </>
         )}
@@ -44,7 +56,6 @@ const LogoLink = styled(Link)`
 
 const Logo = styled.h1`
   font-size: 2.5em;
-  font-family: "Lexend", Helvetica;
   padding-top: 5px;
   color: #222;
   text-align: center;

@@ -3,6 +3,13 @@ import Header from "@/components/Header";
 import "@/styles/globals.css";
 import styled from "styled-components";
 import { useRef } from "react";
+import { Roboto } from "@next/font/google";
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  fallback: ["Helvetica"],
+});
 
 export default function App({ Component, pageProps }) {
   const landingRef = useRef();
@@ -10,6 +17,7 @@ export default function App({ Component, pageProps }) {
   const aboutRef = useRef();
   const stackRef = useRef();
   const contactRef = useRef();
+
   function handleScroll(reference) {
     const element =
       reference === "landing"
@@ -27,7 +35,7 @@ export default function App({ Component, pageProps }) {
   }
 
   return (
-    <Layout>
+    <Layout className={roboto.className}>
       <Header handleScroll={handleScroll} />
       <Component
         {...pageProps}
@@ -43,6 +51,6 @@ export default function App({ Component, pageProps }) {
   );
 }
 
-const Layout = styled.div`
+const Layout = styled.main`
   position: relative;
 `;
