@@ -1,40 +1,42 @@
-import BackIcon from "@/components/icons/BackIcon";
-import Link from "next/link";
 import styled from "styled-components";
 
 export default function Impressum() {
   return (
     <>
-      <Link href="/">
-        <BackIcon />
-      </Link>
       <Container>
-        <h1>Legal Disclosure / Impressum</h1>
-        <br />
-        <p>Jan Lahse</p>
-        <p>Buntentorsteinweg 386</p>
-        <p>28201 Bremen</p>
-        <p>Germany / Deutschland</p>
-        <br />
-        <p>
-          <b>E-Mail: </b>jan.lahse@gmx.de
-        </p>
-        <p>
-          <b>Phone / Telefon: </b>+49 176 519 474 96
-        </p>
+        <section>
+          <h2>Legal Disclosure / Impressum</h2>
+          <br />
+          <p>Jan Lahse</p>
+          <p>Buntentorsteinweg 386</p>
+          <p>28201 Bremen</p>
+          <p>Germany / Deutschland</p>
+          <br />
+          <p>
+            <b>E-Mail: </b>jan.lahse@gmx.de
+          </p>
+          <p>
+            <b>Phone / Telefon: </b>+49 176 519 474 96
+          </p>
+        </section>
       </Container>
     </>
   );
 }
 
 const Container = styled.section`
-  margin: 10px 15px 55px;
-  min-height: 50vh;
-  line-height: 1.5em;
-  text-align: center;
+  margin: 65px 15px 5px;
+  padding-bottom: 10px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  @media (min-width: 650px) {
+  gap: 10px;
+  & > * {
+    max-width: 800px;
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+    @media (min-width: 650px) {
+      text-align: start;
+    }
   }
 `;
