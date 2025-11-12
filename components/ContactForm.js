@@ -3,7 +3,9 @@ import styled from "styled-components";
 export default function ContactForm({ contactRef }) {
   function handleSubmit(event) {
     event.preventDefault();
-    alert("The form is currently work in progress. Thanks for your patience!");
+    alert(
+      "This form is currently being built. Feel free to contact me via E-Mail at jan.lahse@gmx.de"
+    );
   }
   return (
     <section ref={contactRef}>
@@ -38,7 +40,7 @@ const SubmitButton = styled.button`
   grid-column: 2/3;
   font-family: inherit;
   font-size: 1.1em;
-  font-weight: 450;
+  font-weight: 400;
   background-color: hsl(240, 65%, 60%);
   border: none;
   border-radius: 3px;

@@ -4,7 +4,6 @@ import NavBar from "@/components/NavBar";
 import Projects from "@/components/Projects";
 import TechStack from "@/components/TechStack";
 import styled from "styled-components";
-import Head from "next/head";
 import LandingPage from "@/components/LandingPage";
 
 export default function Home({
@@ -16,21 +15,18 @@ export default function Home({
   handleScroll,
 }) {
   return (
-    <Main>
-      <Head>
-        <title>Jan Lahse</title>
-      </Head>
+    <Container>
       <LandingPage landingRef={landingRef} handleScroll={handleScroll} />
       <Projects projectsRef={projectsRef} />
       <About aboutRef={aboutRef} />
       <TechStack stackRef={stackRef} />
       <ContactForm contactRef={contactRef} />
       <NavBar isHeaderNav={false} handleScroll={handleScroll} />
-    </Main>
+    </Container>
   );
 }
 
-const Main = styled.section`
+const Container = styled.section`
   margin: 65px 15px 5px;
   padding-bottom: 10px;
   display: flex;
@@ -41,9 +37,5 @@ const Main = styled.section`
     max-width: 800px;
     width: 100%;
     scroll-margin-top: 65px;
-    margin-bottom: 30px;
-    &:last-child {
-      margin-bottom: 0;
-    }
   }
 `;
