@@ -3,7 +3,9 @@ import styled from "styled-components";
 export default function ContactForm({ contactRef }) {
   function handleSubmit(event) {
     event.preventDefault();
-    alert("The form is currently work in progress. Thanks for your patience!");
+    alert(
+      "This form is currently being built. Feel free to contact me via E-Mail at jan.lahse@gmx.de"
+    );
   }
   return (
     <section ref={contactRef}>

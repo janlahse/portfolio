@@ -33,7 +33,7 @@ const Container = styled.section`
   & > * {
     max-width: 800px;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     text-align: center;
     @media (min-width: 650px) {
       text-align: start;

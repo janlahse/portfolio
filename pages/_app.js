@@ -4,6 +4,7 @@ import "@/styles/globals.css";
 import styled from "styled-components";
 import { useRef } from "react";
 import { Roboto } from "@next/font/google";
+import Head from "next/head";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -36,6 +37,9 @@ export default function App({ Component, pageProps }) {
 
   return (
     <Layout className={roboto.className}>
+      <Head>
+        <title>Jan Lahse</title>
+      </Head>
       <Header handleScroll={handleScroll} />
       <Component
         {...pageProps}

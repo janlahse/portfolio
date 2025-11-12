@@ -16,7 +16,8 @@ export default function Header({ handleScroll }) {
   return (
     <>
       <Container>
-        {router.pathname === "/impressum" ? (
+        {router.pathname === "/legal-disclosure" ||
+        router.pathname === "/privacy-policy" ? (
           <LogoLink href="/">
             <Logo className={lexend.className}>Jan Lahse</Logo>
           </LogoLink>
@@ -59,7 +60,11 @@ const Logo = styled.h1`
   padding-top: 5px;
   color: #222;
   text-align: center;
+  transition: color 0.1s;
   cursor: pointer;
+  &:hover {
+    color: hsl(240, 52%, 52%);
+  }
   @media (min-width: 650px) {
     text-align: left;
   }
