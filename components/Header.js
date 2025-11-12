@@ -2,7 +2,7 @@ import styled from "styled-components";
 import NavBar from "./NavBar";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Lexend } from "@next/font/google";
+import { Lexend } from "next/font/google";
 
 const lexend = Lexend({
   subsets: ["latin"],

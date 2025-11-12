@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Space_Mono } from "@next/font/google";
+import { Space_Mono } from "next/font/google";
 
 const spaceMono = Space_Mono({
   subsets: ["latin"],

@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import "@/styles/globals.css";
 import styled from "styled-components";
 import { useRef } from "react";
-import { Roboto } from "@next/font/google";
+import { Roboto } from "next/font/google";
 import Head from "next/head";
 
 const roboto = Roboto({
