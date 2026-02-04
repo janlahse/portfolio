@@ -28,7 +28,7 @@ export const ProjectList = [
     type: "websites",
     description:
       "This website is an example of a small business homepage. Check out the opening hours, menu and more about a made-up, pigeon-themed coffeeshop.",
-    coverImage: "/projects/cafe_stadttaube.PNG",
+    coverImage: "/projects/cafe_stadttaube.png",
     tags: ["HTML", "CSS", "JavaScript", "GitHub"],
     thumbnailBorder: true,
     websiteLink: "https://cafe-stadttaube.pages.dev",
