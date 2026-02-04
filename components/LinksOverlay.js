@@ -3,16 +3,21 @@ import styled from "styled-components";
 import ExternalLinkIcon from "./icons/ExternalLinkIcon";
 import Image from "next/image";
 
-export default function LinksOverlay({ ref, showLinks }) {
+export default function LinksOverlay({
+  ref,
+  showLinks,
+  websiteLink,
+  githubLink,
+}) {
   return (
     <Overlay ref={ref} $showLinks={showLinks}>
       <li>
-        <Link href="https://virtual-pet-care.vercel.app/">
+        <Link href={websiteLink} target="_blank">
           <ExternalLinkIcon />
         </Link>
       </li>
       <li>
-        <Link href="https://github.com/janlahse/capstone-project">
+        <Link href={githubLink} target="_blank">
           <Logo
             alt="GitHub Logo"
             src="/icons/github_logo.png"
@@ -33,7 +38,7 @@ const Overlay = styled.ul`
   opacity: 0.8;
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 7px;
   list-style: none;
   ${(props) => props.$showLinks && "transform: translate(0, 100%);"}
   transition: transform 0.5s ease;
