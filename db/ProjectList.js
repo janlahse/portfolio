@@ -19,6 +19,20 @@ export const ProjectList = [
       "Vercel",
     ],
     thumbnailBorder: true,
+    websiteLink: "https://virtual-pet-care.vercel.app",
+    githubLink: "https://github.com/janlahse/capstone-project",
+  },
+  {
+    title: "Café Stadttaube",
+    id: "cafe_stadttaube",
+    type: "websites",
+    description:
+      "This website is an example of a small business homepage. Check out the opening hours, menu and more about a made-up, pigeon-themed coffeeshop.",
+    coverImage: "/projects/cafe_stadttaube.PNG",
+    tags: ["HTML", "CSS", "JavaScript", "GitHub"],
+    thumbnailBorder: true,
+    websiteLink: "https://cafe-stadttaube.pages.dev",
+    githubLink: "https://github.com/janlahse/cafe-website",
   },
   {
     title: "Work in Progress",

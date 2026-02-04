@@ -51,7 +51,12 @@ export default function ProjectThumbnail({ project }) {
         showVideo && <VideoOverlay source={project.video} ref={ref} />
       )}
       {project.type === "websites" && (
-        <LinksOverlay ref={ref} showLinks={showLinks} />
+        <LinksOverlay
+          ref={ref}
+          showLinks={showLinks}
+          websiteLink={project.websiteLink}
+          githubLink={project.githubLink}
+        />
       )}
       <CoverImage
         src={project.coverImage}
